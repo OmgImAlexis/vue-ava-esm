@@ -1,0 +1,46 @@
+{
+  "name": "vue-ava-esm",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "ava"
+  },
+  "author": "Alexis Tyler <xo@wvvw.me> (https://wvvw.me/)",
+  "license": "MIT",
+  "devDependencies": {
+    "@vue/test-utils": "^1.0.0-beta.25",
+    "ava": "1.0.0-beta.8",
+    "browser-env": "^3.2.5",
+    "esm": "^3.0.84",
+    "require-extension-hooks": "^0.3.3"
+  },
+  "dependencies": {
+    "vue": "^2.5.17"
+  },
+  "ava": {
+    "sources": [
+      "components/**/*.{js,vue}"
+    ],
+    "require": [
+      "esm",
+      "test/helpers/setup.js"
+    ],
+    "babel": {
+      "extensions": [
+        "js",
+        "vue"
+      ],
+      "testOptions": {
+        "presets": [
+          [
+            "module:ava/stage-4",
+            {
+              "modules": false
+            }
+          ]
+        ]
+      }
+    }
+  }
+}
