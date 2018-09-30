@@ -1,5 +1,5 @@
 import test from 'ava';
-import { createLocalVue } from '@vue/test-utils';
+import { createLocalVue, mount } from '@vue/test-utils';
 import HelloWorld from '../../components/hello-world.vue';
 
 test('mounts', t => {
@@ -9,4 +9,4 @@ test('mounts', t => {
         localVue: createLocalVue(),
         propsData: {}
     }).html(), 'with no props');
-})
+});

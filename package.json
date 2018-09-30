@@ -13,18 +13,21 @@
     "ava": "1.0.0-beta.8",
     "browser-env": "^3.2.5",
     "esm": "^3.0.84",
-    "require-extension-hooks": "^0.3.3"
+    "require-extension-hooks": "^0.3.3",
+    "require-extension-hooks-babel": "^0.1.1",
+    "require-extension-hooks-vue": "^1.1.0",
+    "vue-template-compiler": "^2.5.17"
   },
   "dependencies": {
     "vue": "^2.5.17"
   },
   "ava": {
     "sources": [
-      "components/**/*.{js,vue}"
+      "./components/**/*.{js,vue}"
     ],
     "require": [
       "esm",
-      "test/helpers/setup.js"
+      "./test/helpers/setup.js"
     ],
     "babel": {
       "extensions": [
